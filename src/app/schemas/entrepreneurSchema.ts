@@ -62,7 +62,23 @@ const entrepreneurSchema = z.object({
 
   pradesh: z.string().nonempty("required"),
   district: z.string().nonempty("required"),
-  nagarPalika: z.string().nonempty("required")
+  nagarPalika: z.string().nonempty("required"),
+
+  // Bank Name
+  bankName: z.string()
+    .min(3)
+    .max(50)
+    .nonempty("Enter the following input to proceed"),
+
+    // Bank Account Number
+  bankAccountNumber: z.string()
+  .min(6)
+  .max(20)
+  .nonempty("Enter the following input to proceed")
+  .regex(/^[0-9]+$/)
+  .refine(value => parseInt(value, 10) !== 0, {
+    message: "Bank Account Number cannot be zero"
+  }),
 });
 
 

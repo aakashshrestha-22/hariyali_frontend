@@ -220,9 +220,9 @@ export const SIDENAV_ITEMS: SideNavItemGroup[] = [
         ],
       },
       {
-        title: "Section",
+        title: "Setup",
         path: "/dashboard",
-        icon: <BsHouseDoor size={20} />,
+        icon: <BsGear size={20} />,
         submenu: true,
         subMenuItems: [
           { title: "Merchant", path: "/dashboard/merchant" },

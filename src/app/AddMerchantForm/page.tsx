@@ -290,6 +290,25 @@ const AddMerchantForm: React.FC = () => {
                 })}
               </select>
             </div>
+            
+            {/* Bank Name */}
+            <div className="">
+              <label htmlFor="bankName" 
+              className="block text-sm font-medium leading-6 text-gray-900">
+                Bank Name
+              </label>
+              <select
+                id="bankName"
+                {...register("bankName")}
+                className="selectStyle"
+              >
+                <option value="" disabled>Select Bank Name</option>
+                <option value="Bank A">Bank A</option>
+                <option value="Bank B">Bank B</option>
+                <option value="Bank C">Bank C</option>
+              </select>
+            </div>
+
             <div className="sm:col-start-1 mt-6 flex items-end justify-start gap-x-6">
               <button
                 type="button"
